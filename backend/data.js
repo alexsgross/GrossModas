@@ -14,12 +14,12 @@ const data = {
 
         },
         {
-            name: 'Camisa Social em poliesteer e algodão',
+            name: 'Camisa Social em poliester e algodão',
             slug: 'camisa-social-poliester-algodao',
             categoty: 'camisas',
             image: '/images/p2.jpg',
             price: 'R$ 89,99',
-            countInStock: 40,
+            countInStock: 0,
             brand: 'Pierre Frabrege',
             rating: 2.5,
             numReviews: 6,

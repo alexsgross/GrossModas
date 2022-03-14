@@ -1,10 +1,12 @@
 import { useEffect, useReducer, useState } from "react";
 import axios from "axios";
 import logger from "use-reducer-logger";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+
 import Product from "../components/Product";
-//import data from "../data";
+import Row from "react-bootstrap/esm/Row";
+import Col from "react-bootstrap/esm/Col";
+import { Helmet } from "react-helmet-async";
+
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -43,6 +45,9 @@ function HomeScreen(){
 
     return (
       <div>
+        <Helmet>
+          <title>Gross Modas</title>
+        </Helmet>
         <h1>Produtos em Destaque</h1>
         <div className="products">
           {loading ? (
