@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useReducer } from "react";
+import { useEffect, useReducer, useContext } from "react";
 import { useParams } from "react-router-dom";
 import Col from "react-bootstrap/esm/Col";
 import Row from "react-bootstrap/esm/Row";
@@ -12,6 +12,7 @@ import { Helmet } from "react-helmet-async";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import { getError } from "../utils";
+import { Store } from "../Store";
 
 
 
@@ -49,6 +50,11 @@ function ProductScreen() {
       };   
       fetchData(); 
   }, [slug]);
+  
+  const {state, dispatch: cxtDispatch} = useContext(Store);
+  const addToCartHandler = () => {
+      cxtDispatch({ type: 'cart_add_item', payload: {...product, quantity: 1} });
+  }
 
     return loading ? (
       <LoadingBox/>
@@ -110,7 +116,7 @@ function ProductScreen() {
                   {product.countInStock > 0 && (
                     <ListGroup.Item>
                       <div className="d-grid">
-                        <Button variant="primary">
+                        <Button onClick={addToCartHandler} variant="primary">
                           <b>Adicionar ao Carrinho</b>
                         </Button>
                       </div>
@@ -122,7 +128,7 @@ function ProductScreen() {
             </Card>
           </Col>
         </Row>
-        </div>
+       </div>
     );
 }
 export default ProductScreen;
