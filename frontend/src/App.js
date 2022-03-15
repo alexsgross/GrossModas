@@ -28,7 +28,7 @@ function App() {
           </Container>        
         </main>
         <footer>
-          <div className="text-center"> Alex Gross - Todos os direitor reservados </div>
+          <div className="text-center"> Alex Gross - Todos os direitos reservados </div>
           </footer>
       </div>
     </BrowserRouter>
