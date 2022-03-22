@@ -6,7 +6,7 @@ const data = {
             categoty: 'camisas',
             image: '/images/p1.jpg',
             price: 99.99,
-            countInStock: 10,
+            countInStock: 0,
             brand: 'Pierre Cardin',
             rating: 4.5,
             numReviews: 10,
