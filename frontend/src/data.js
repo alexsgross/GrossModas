@@ -19,7 +19,7 @@ const data = {
             categoty: 'camisas',
             image: '/images/p2.jpg',
             price: 89.98,
-            countInStock: 40,
+            countInStock: 0,
             brand: 'Pierre Frabrege',
             rating: 2.5,
             numReviews: 6,
